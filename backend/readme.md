@@ -48,7 +48,7 @@ This document defines the specific task ownership for the 3-person Farm2Market d
 ### The Definition of Done (DoD)
 All team members must satisfy these conditions before submitting a PR:
 1.  **Validation:** Every request body must be validated against a Zod schema.
-2.  **Naming:** Field names MUST match the data dictionary/contract exactly.
+2.  **Naming:** Field names MUST be in camelCase.
 3.  **Mocking:** If an integration (e.g., payment) isn't ready, use a mock response. Do not block progress.
 4.  **Error Handling:** Use `try-catch` blocks and return correct HTTP status codes (400, 500, etc.).
 5.  **Security:** Ensure the ML service is internal and never exposed to the internet.
