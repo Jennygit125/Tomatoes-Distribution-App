@@ -1,4 +1,4 @@
-import { useState } from "react";
+ï»¿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
@@ -23,7 +23,6 @@ export default function Settings() {
 
   const saveProfile = (e) => {
     e.preventDefault();
-    // TODO: connect to real API
     console.log("Profile saved:", profile);
     setOpenSection(null);
   };
@@ -61,7 +60,7 @@ export default function Settings() {
 
         <button className="settings-item" onClick={() => toggleSection("profile")}>
           <span>Edit Profile</span>
-          <span className="settings-arrow">{openSection === "profile" ? "?" : "›"}</span>
+          <span className="settings-arrow">{openSection === "profile" ? "^" : ">"}</span>
         </button>
         {openSection === "profile" && (
           <form className="settings-form" onSubmit={saveProfile}>
@@ -74,7 +73,7 @@ export default function Settings() {
 
         <button className="settings-item" onClick={() => toggleSection("bank")}>
           <span>Bank Details</span>
-          <span className="settings-arrow">{openSection === "bank" ? "?" : "›"}</span>
+          <span className="settings-arrow">{openSection === "bank" ? "^" : ">"}</span>
         </button>
         {openSection === "bank" && (
           <form className="settings-form" onSubmit={saveBank}>
@@ -87,7 +86,7 @@ export default function Settings() {
 
         <button className="settings-item" onClick={() => toggleSection("password")}>
           <span>Change Password</span>
-          <span className="settings-arrow">{openSection === "password" ? "?" : "›"}</span>
+          <span className="settings-arrow">{openSection === "password" ? "^" : ">"}</span>
         </button>
         {openSection === "password" && (
           <form className="settings-form" onSubmit={savePassword}>
@@ -104,7 +103,7 @@ export default function Settings() {
 
         <button className="settings-item" onClick={() => toggleSection("notifications")}>
           <span>Notifications</span>
-          <span className="settings-arrow">{openSection === "notifications" ? "?" : "›"}</span>
+          <span className="settings-arrow">{openSection === "notifications" ? "^" : ">"}</span>
         </button>
         {openSection === "notifications" && (
           <div className="settings-form">
@@ -125,7 +124,7 @@ export default function Settings() {
 
         <button className="settings-item" onClick={() => toggleSection("language")}>
           <span>Language</span>
-          <span className="settings-arrow">{openSection === "language" ? "?" : "›"}</span>
+          <span className="settings-arrow">{openSection === "language" ? "^" : ">"}</span>
         </button>
         {openSection === "language" && (
           <div className="settings-form">

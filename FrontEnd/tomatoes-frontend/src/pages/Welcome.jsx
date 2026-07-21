@@ -116,7 +116,7 @@ export default function Welcome() {
             </button>
           </div>
           <div className="welcome-hero-image-wrap">
-            <img src={heroImage} alt="Fresh tomatoes" className="welcome-hero-image" />
+            <img src={heroImage} alt="Fresh tomatoes" className="welcome-hero-image" loading="lazy" />
           </div>
         </div>
       </div>
@@ -202,4 +202,3 @@ export default function Welcome() {
     </div>
   );
 }
-

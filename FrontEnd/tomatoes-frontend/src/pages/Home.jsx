@@ -69,7 +69,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      <img src={tomatoImage} alt="Fresh tomatoes" className="home-image" />
+      <img src={tomatoImage} alt="Fresh tomatoes" className="home-image" loading="lazy" />
 
       <button
         className="list-toggle-btn"
@@ -140,4 +140,3 @@ export default function Home() {
     </div>
   );
 }
-

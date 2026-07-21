@@ -1,12 +1,14 @@
 import { useNavigate, NavLink } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import logo from "../../assets/images/ZeroSpoil_icon.svg";
 import "./Sidebar.css";
 
 export default function Sidebar({ isOpen, onClose }) {
   const navigate = useNavigate();
+  const { logout } = useAuth();
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    logout();
     onClose();
     navigate("/login");
   };
